@@ -16,3 +16,11 @@ use CodeIgniter\Router\RouteCollection;
  $routes->get('/articles/delete/(:num)', 'ArticleController::delete/$1');
  $routes->get('upload-form', 'FileUploadController::index');
  $routes->post('upload-file', 'FileUploadController::uploadFile');
+ $routes->get('student/form','StudentUploadController::form');
+ $routes->post('/student/upload', 'StudentUploadController::upload'); 
+ $routes->get('student/form/(:num)?', 'StudentUploadController::form/$1');
+ $routes->post('student/upload', 'StudentUploadController::upload');
+ $routes->get('student/list', 'StudentUploadController::list');
+ $routes->delete('student/delete/(:num)', 'StudentUploadController::delete/$1');
+
+

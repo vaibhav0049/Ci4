@@ -1,0 +1,1411 @@
+INFO - 2024-10-23 05:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-23 05:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-23 07:28:22 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:28:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:28:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668502_a3521b2972d905ab05a7.jpg\', \'885274\', \'2024-10-23 07:28:22\', \'2024-10-23 07:28:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668502_a3521b2972d905ab05a7.jpg\', \'885274\', \'2024-10-23 07:28:22\', \'2024-10-23 07:28:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:28:22 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668502_a3521b2972d905ab05a7.jpg\', \'885274\', \'2024-10-23 07:28:22\', \'2024-10-23 07:28:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668502_a3521b2972d905ab05a7.jpg\', \'885274\', \'2024-10-23 07:28:22\', \'2024-10-23 07:28:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668502_a3521b2972d905ab05a7.jpg\', \'885274\', \'2024-10-23 07:28:22\', \'2024-10-23 07:28:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-10-23 07:30:42 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:30:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:30:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668642_5e6f75dfc5201a4af029.jpg\', \'885274\', \'2024-10-23 07:30:42\', \'2024-10-23 07:30:42\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668642_5e6f75dfc5201a4af029.jpg\', \'885274\', \'2024-10-23 07:30:42\', \'2024-10-23 07:30:42\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:30:42 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668642_5e6f75dfc5201a4af029.jpg\', \'885274\', \'2024-10-23 07:30:42\', \'2024-10-23 07:30:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668642_5e6f75dfc5201a4af029.jpg\', \'885274\', \'2024-10-23 07:30:42\', \'2024-10-23 07:30:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729668642_5e6f75dfc5201a4af029.jpg\', \'885274\', \'2024-10-23 07:30:42\', \'2024-10-23 07:30:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-10-23 07:37:22 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:37:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:37:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669042_e30290deda30ba9ac1b2.jpg\', \'885274\', \'A2\', \'2024-10-23 07:37:22\', \'2024-10-23 07:37:22\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669042_e30290deda30ba9ac1b2.jpg\', \'885274\', \'A2\', \'2024-10-23 07:37:22\', \'2024-10-23 07:37:22\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:37:22 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669042_e30290deda30ba9ac1b2.jpg\', \'885274\', \'A2\', \'2024-10-23 07:37:22\', \'2024-10-23 07:37:22\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669042_e30290deda30ba9ac1b2.jpg\', \'885274\', \'A2\', \'2024-10-23 07:37:22\', \'2024-10-23 07:37:22\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669042_e30290deda30ba9ac1b2.jpg\', \'885274\', \'A2\', \'2024-10-23 07:37:22\', \'2024-10-23 07:37:22\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(53): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:39:07 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729669147_7b157173872ed6241eef.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:39:07 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:39:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:39:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669147_7b157173872ed6241eef.jpg\', \'885274\', \'A2\', \'2024-10-23 07:39:07\', \'2024-10-23 07:39:07\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669147_7b157173872ed6241eef.jpg\', \'885274\', \'A2\', \'2024-10-23 07:39:07\', \'2024-10-23 07:39:07\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:39:07 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669147_7b157173872ed6241eef.jpg\', \'885274\', \'A2\', \'2024-10-23 07:39:07\', \'2024-10-23 07:39:07\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669147_7b157173872ed6241eef.jpg\', \'885274\', \'A2\', \'2024-10-23 07:39:07\', \'2024-10-23 07:39:07\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669147_7b157173872ed6241eef.jpg\', \'885274\', \'A2\', \'2024-10-23 07:39:07\', \'2024-10-23 07:39:07\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:41:17 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729669277_94157f2bfa78211ffeb7.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:41:17 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:41:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:41:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669277_94157f2bfa78211ffeb7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:41:17\', \'2024-10-23 07:41:17\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669277_94157f2bfa78211ffeb7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:41:17\', \'2024-10-23 07:41:17\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:41:17 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669277_94157f2bfa78211ffeb7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:41:17\', \'2024-10-23 07:41:17\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669277_94157f2bfa78211ffeb7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:41:17\', \'2024-10-23 07:41:17\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669277_94157f2bfa78211ffeb7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:41:17\', \'2024-10-23 07:41:17\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:46:35 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729669595_60970383f7d7dbc3e5d7.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:46:35 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:46:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:46:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669595_60970383f7d7dbc3e5d7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:46:35\', \'2024-10-23 07:46:35\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669595_60970383f7d7dbc3e5d7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:46:35\', \'2024-10-23 07:46:35\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:46:35 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669595_60970383f7d7dbc3e5d7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:46:35\', \'2024-10-23 07:46:35\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669595_60970383f7d7dbc3e5d7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:46:35\', \'2024-10-23 07:46:35\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669595_60970383f7d7dbc3e5d7.jpg\', \'885274\', \'A2\', \'2024-10-23 07:46:35\', \'2024-10-23 07:46:35\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:47:02 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729669622_42817a33812f2df09814.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:47:02 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:47:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:47:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669622_42817a33812f2df09814.jpg\', \'885274\', \'A2\', \'2024-10-23 07:47:02\', \'2024-10-23 07:47:02\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669622_42817a33812f2df09814.jpg\', \'885274\', \'A2\', \'2024-10-23 07:47:02\', \'2024-10-23 07:47:02\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:47:02 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669622_42817a33812f2df09814.jpg\', \'885274\', \'A2\', \'2024-10-23 07:47:02\', \'2024-10-23 07:47:02\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669622_42817a33812f2df09814.jpg\', \'885274\', \'A2\', \'2024-10-23 07:47:02\', \'2024-10-23 07:47:02\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669622_42817a33812f2df09814.jpg\', \'885274\', \'A2\', \'2024-10-23 07:47:02\', \'2024-10-23 07:47:02\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:48:06 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729669686_db2489153b3a5ba835d1.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:48:06 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:48:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:48:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669686_db2489153b3a5ba835d1.jpg\', \'885274\', \'A2\', \'2024-10-23 07:48:06\', \'2024-10-23 07:48:06\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669686_db2489153b3a5ba835d1.jpg\', \'885274\', \'A2\', \'2024-10-23 07:48:06\', \'2024-10-23 07:48:06\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:48:06 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669686_db2489153b3a5ba835d1.jpg\', \'885274\', \'A2\', \'2024-10-23 07:48:06\', \'2024-10-23 07:48:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669686_db2489153b3a5ba835d1.jpg\', \'885274\', \'A2\', \'2024-10-23 07:48:06\', \'2024-10-23 07:48:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729669686_db2489153b3a5ba835d1.jpg\', \'885274\', \'A2\', \'2024-10-23 07:48:06\', \'2024-10-23 07:48:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 07:57:27 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729670247_610766dbd06769b406eb.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 07:57:27 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 07:57:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:57:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670247_610766dbd06769b406eb.jpg\', \'885274\', \'A2\', \'2024-10-23 07:57:27\', \'2024-10-23 07:57:27\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670247_610766dbd06769b406eb.jpg\', \'885274\', \'A2\', \'2024-10-23 07:57:27\', \'2024-10-23 07:57:27\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 07:57:27 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670247_610766dbd06769b406eb.jpg\', \'885274\', \'A2\', \'2024-10-23 07:57:27\', \'2024-10-23 07:57:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670247_610766dbd06769b406eb.jpg\', \'885274\', \'A2\', \'2024-10-23 07:57:27\', \'2024-10-23 07:57:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670247_610766dbd06769b406eb.jpg\', \'885274\', \'A2\', \'2024-10-23 07:57:27\', \'2024-10-23 07:57:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 08:00:03 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729670403_f77382da3abb83c656bc.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 08:00:03 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 08:00:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670403_f77382da3abb83c656bc.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:03\', \'2024-10-23 08:00:03\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670403_f77382da3abb83c656bc.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:03\', \'2024-10-23 08:00:03\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:03 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670403_f77382da3abb83c656bc.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:03\', \'2024-10-23 08:00:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670403_f77382da3abb83c656bc.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:03\', \'2024-10-23 08:00:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670403_f77382da3abb83c656bc.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:03\', \'2024-10-23 08:00:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 08:00:09 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729670409_fb624d4e56386265b199.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 08:00:09 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 08:00:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670409_fb624d4e56386265b199.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:09\', \'2024-10-23 08:00:09\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670409_fb624d4e56386265b199.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:09\', \'2024-10-23 08:00:09\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:09 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670409_fb624d4e56386265b199.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:09\', \'2024-10-23 08:00:09\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670409_fb624d4e56386265b199.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:09\', \'2024-10-23 08:00:09\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670409_fb624d4e56386265b199.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:09\', \'2024-10-23 08:00:09\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 08:00:12 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729670412_92a11bd1f68d42629f93.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 08:00:12 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 08:00:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670412_92a11bd1f68d42629f93.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:12\', \'2024-10-23 08:00:12\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670412_92a11bd1f68d42629f93.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:12\', \'2024-10-23 08:00:12\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:12 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670412_92a11bd1f68d42629f93.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:12\', \'2024-10-23 08:00:12\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670412_92a11bd1f68d42629f93.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:12\', \'2024-10-23 08:00:12\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670412_92a11bd1f68d42629f93.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:12\', \'2024-10-23 08:00:12\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 08:00:15 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729670415_4e0754051d1ebf765d8e.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 08:00:15 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 08:00:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670415_4e0754051d1ebf765d8e.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:15\', \'2024-10-23 08:00:15\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670415_4e0754051d1ebf765d8e.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:15\', \'2024-10-23 08:00:15\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:00:15 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670415_4e0754051d1ebf765d8e.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:15\', \'2024-10-23 08:00:15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670415_4e0754051d1ebf765d8e.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:15\', \'2024-10-23 08:00:15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729670415_4e0754051d1ebf765d8e.jpg\', \'885274\', \'A2\', \'2024-10-23 08:00:15\', \'2024-10-23 08:00:15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+DEBUG - 2024-10-23 08:51:00 --> Student Data: {"student_name":"Vaibhav Yadav","father_name":"Kaushal kishor Yadav","mother_name":"Sonam Yadav","class":"12","gender":"Male","photo":"1729673460_feaffd4c0538477648a1.jpg","registration_no":"885274","section":"A2"}
+ERROR - 2024-10-23 08:51:00 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\Ci4\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#11 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2024-10-23 08:51:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:51:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673460_feaffd4c0538477648a1.jpg\', \'885274\', \'A2\', \'2024-10-23 08:51:00\', \'2024-10-23 08:51:00\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673460_feaffd4c0538477648a1.jpg\', \'885274\', \'A2\', \'2024-10-23 08:51:00\', \'2024-10-23 08:51:00\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:51:00 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673460_feaffd4c0538477648a1.jpg\', \'885274\', \'A2\', \'2024-10-23 08:51:00\', \'2024-10-23 08:51:00\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673460_feaffd4c0538477648a1.jpg\', \'885274\', \'A2\', \'2024-10-23 08:51:00\', \'2024-10-23 08:51:00\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673460_feaffd4c0538477648a1.jpg\', \'885274\', \'A2\', \'2024-10-23 08:51:00\', \'2024-10-23 08:51:00\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-10-23 08:55:45 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Ci4\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(68): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#10 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2024-10-23 08:55:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: student/upload]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:55:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673745_69d076754bfa8c46a564.jpg\', \'885274\', \'A2\', \'2024-10-23 08:55:45\', \'2024-10-23 08:55:45\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673745_69d076754bfa8c46a564.jpg\', \'885274\', \'A2\', \'2024-10-23 08:55:45\', \'2024-10-23 08:55:45\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 08:55:45 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673745_69d076754bfa8c46a564.jpg\', \'885274\', \'A2\', \'2024-10-23 08:55:45\', \'2024-10-23 08:55:45\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673745_69d076754bfa8c46a564.jpg\', \'885274\', \'A2\', \'2024-10-23 08:55:45\', \'2024-10-23 08:55:45\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (\'Vaibhav Yadav\', \'Kaushal kishor Yadav\', \'Sonam Yadav\', \'12\', \'Male\', \'1729673745_69d076754bfa8c46a564.jpg\', \'885274\', \'A2\', \'2024-10-23 08:55:45\', \'2024-10-23 08:55:45\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`student_name`, `father_name`, `mother_name`, `class`, `gender`, `photo`, `registration_no`, `section`, `created_at`, `updated_at`) VALUES (:student_name:, :father_name:, :mother_name:, :class:, :gender:, :photo:, :registration_no:, :section:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Studentuploadcontroller.php(68): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->upload()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 09:22:36 --> CodeIgniter\Pager\Exceptions\PagerException: "bootstrap_pagination" is not a valid Pager template.
+[Method: GET, Route: student/listStudents]
+in SYSTEMPATH\Pager\Pager.php on line 124.
+ 1 SYSTEMPATH\Pager\Pager.php(124): CodeIgniter\Pager\Exceptions\PagerException::forInvalidTemplate('bootstrap_pagination')
+ 2 SYSTEMPATH\Pager\Pager.php(87): CodeIgniter\Pager\Pager->displayLinks('group1', 'bootstrap_pagination')
+ 3 APPPATH\Controllers\Studentuploadcontroller.php(93): CodeIgniter\Pager\Pager->links('group1', 'bootstrap_pagination')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 09:50:32 --> ErrorException: Cannot redeclare App\Controllers\StudentUploadController::form()
+[Method: GET, Route: student/list]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-10-23 09:51:06 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 09:51:14 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 95.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:06:33 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 94.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:06:36 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 94.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:06:38 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 94.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:06:40 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::paginate()
+[Method: GET, Route: student/listStudents]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 94.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->listStudents()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:08:08 --> ParseError: Unclosed '{' on line 9
+[Method: GET, Route: student/list]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 123.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Ci4\\app\\Controllers\\StudentUploadController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\StudentUploadController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\StudentUploadController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\StudentUploadController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:08:37 --> ErrorException: Cannot redeclare App\Controllers\StudentUploadController::form()
+[Method: GET, Route: student/list]
+in APPPATH\Controllers\Studentuploadcontroller.php on line 105.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-10-23 10:45:53 --> mysqli_sql_exception: Unknown column 'full_name' in 'where clause' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(90): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+#8 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-10-23 10:45:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'full_name' in 'where clause'
+[Method: GET, Route: student/list]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE :full_name: ESCAPE \'!\'
+OR  `phone_number` LIKE :phone_number: ESCAPE \'!\'
+OR  `email_address` LIKE :email_address: ESCAPE \'!\'
+ )', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Studentuploadcontroller.php(90): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:45:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'full_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `phone_number` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `email_address` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `phone_number` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `email_address` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE :full_name: ESCAPE \'!\'
+OR  `phone_number` LIKE :phone_number: ESCAPE \'!\'
+OR  `email_address` LIKE :email_address: ESCAPE \'!\'
+ )', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(90): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:45:53 --> [Caused by] mysqli_sql_exception: Unknown column 'full_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `phone_number` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `email_address` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `phone_number` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `email_address` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `phone_number` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `email_address` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`
+WHERE   (
+`full_name` LIKE :full_name: ESCAPE \'!\'
+OR  `phone_number` LIKE :phone_number: ESCAPE \'!\'
+OR  `email_address` LIKE :email_address: ESCAPE \'!\'
+ )', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Studentuploadcontroller.php(90): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+ERROR - 2024-10-23 10:50:21 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\Ci4\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\Ci4\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\Ci4\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\Ci4\system\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\Ci4\system\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\Ci4\app\Controllers\Studentuploadcontroller.php(89): CodeIgniter\BaseModel->paginate(10)
+#7 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+#8 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+#9 C:\xampp\htdocs\Ci4\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Ci4\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Ci4\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\Ci4\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2024-10-23 10:50:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'where clause'
+[Method: GET, Route: student/list]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE :student_name: ESCAPE \'!\'
+OR  `registration_no` LIKE :registration_no: ESCAPE \'!\'
+OR  `father_name` LIKE :father_name: ESCAPE \'!\'
+ )
+AND `status` != :status:', [...], false)
+ 2 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 3 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 4 APPPATH\Controllers\Studentuploadcontroller.php(89): CodeIgniter\BaseModel->paginate(10)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:50:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `registration_no` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `father_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )
+AND `status` != 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `registration_no` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `father_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )
+AND `status` != 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE :student_name: ESCAPE \'!\'
+OR  `registration_no` LIKE :registration_no: ESCAPE \'!\'
+OR  `father_name` LIKE :father_name: ESCAPE \'!\'
+ )
+AND `status` != :status:', [...], false)
+ 4 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 5 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 6 APPPATH\Controllers\Studentuploadcontroller.php(89): CodeIgniter\BaseModel->paginate(10)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 10:50:21 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `registration_no` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `father_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )
+AND `status` != 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `registration_no` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `father_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )
+AND `status` != 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `registration_no` LIKE \'%shivam rao%\' ESCAPE \'!\'
+OR  `father_name` LIKE \'%shivam rao%\' ESCAPE \'!\'
+ )
+AND `status` != 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `students`
+WHERE   (
+`student_name` LIKE :student_name: ESCAPE \'!\'
+OR  `registration_no` LIKE :registration_no: ESCAPE \'!\'
+OR  `father_name` LIKE :father_name: ESCAPE \'!\'
+ )
+AND `status` != :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(678): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 6 SYSTEMPATH\BaseModel.php(1284): CodeIgniter\Model->countAllResults(false)
+ 7 APPPATH\Controllers\Studentuploadcontroller.php(89): CodeIgniter\BaseModel->paginate(10)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->list()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 11:04:54 --> ErrorException: Undefined variable $section
+[Method: GET, Route: student/form/3]
+in APPPATH\Views\student\form.php on line 87.
+ 1 APPPATH\Views\student\form.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $section', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\student\\form.php', 87)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\student\\form.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('student/form', [], true)
+ 5 APPPATH\Controllers\Studentuploadcontroller.php(24): view('student/form', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->form('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')
+CRITICAL - 2024-10-23 11:05:53 --> ErrorException: Undefined variable $section
+[Method: GET, Route: student/form]
+in APPPATH\Views\student\form.php on line 87.
+ 1 APPPATH\Views\student\form.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $section', 'C:\\xampp\\htdocs\\Ci4\\app\\Views\\student\\form.php', 87)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Ci4\\app\\Views\\student\\form.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('student/form', [], true)
+ 5 APPPATH\Controllers\Studentuploadcontroller.php(24): view('student/form', [])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StudentUploadController->form()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentUploadController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Ci4\\public\\index.php')

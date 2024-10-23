@@ -14,7 +14,7 @@ class StudentUploadController extends Controller
         $this->studentModel = new StudentModel();
     }
 
-    // Render the form
+    
     public function form($id = null)
     {
         $data = [];
@@ -24,7 +24,7 @@ class StudentUploadController extends Controller
         return view('student/form', $data);
     }
 
-    // Upload the student data
+    
     public function upload()
     {
         helper(['form', 'url']);
@@ -44,6 +44,7 @@ class StudentUploadController extends Controller
         if (!$this->validate($validation->getRules())) {
             return $this->response->setStatusCode(400)->setJSON(['errors' => $validation->getErrors()]);
         }
+        $studentId = $this->request->getPost('student_id');
 
         $photo = $this->request->getFile('photo');
         if ($photo->isValid() && !$photo->hasMoved()) {
@@ -64,11 +65,22 @@ class StudentUploadController extends Controller
             'section' => implode(', ', $this->request->getPost('section') ?? [])
         ];
 
-        if ($this->studentModel->insert($studentData)) {
-            return $this->response->setJSON(['success' => 'Student data saved successfully']);
+        if ($studentId) {
+            
+            if ($this->studentModel->update($studentId, $studentData)) {
+                return $this->response->setJSON(['success' => 'Student data updated successfully']);
+            } else {
+                log_message('error', 'Database Update Error: ' . json_encode($this->studentModel->errors()));
+                return $this->response->setStatusCode(500)->setJSON(['error' => 'Failed to update data in the database']);
+            }
         } else {
-            log_message('error', 'Database Save Error: ' . json_encode($this->studentModel->errors()));
-            return $this->response->setStatusCode(500)->setJSON(['error' => 'Failed to save data in the database']);
+         
+            if ($this->studentModel->insert($studentData)) {
+                return $this->response->setJSON(['success' => 'Student data saved successfully']);
+            } else {
+                log_message('error', 'Database Save Error: ' . json_encode($this->studentModel->errors()));
+                return $this->response->setStatusCode(500)->setJSON(['error' => 'Failed to save data in the database']);
+            }
         }
     }
     public function list()
@@ -79,11 +91,11 @@ class StudentUploadController extends Controller
 
         $search = $this->request->getGet('search');
         if ($search) {
-            $this->studentModel->groupStart()   // applied 'or' condition for the searching 
+            $this->studentModel->groupStart()   
                 ->like('student_name', $search)
                 ->orLike('registration_no', $search)
                 ->orLike('father_name', $search)
-                ->groupEnd();  // here the group ends 
+                ->groupEnd(); 
         }
         $data['students'] = $this->studentModel
             ->paginate($perPage);
@@ -97,16 +109,6 @@ class StudentUploadController extends Controller
         $data['student'] = $this->studentModel->findAll();
         return view('student/list', $data);
     }
-
-
-
-    
-
-
-
-
-
-
 
     public function delete($id)
     {

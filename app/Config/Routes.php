@@ -22,5 +22,8 @@ use CodeIgniter\Router\RouteCollection;
  $routes->post('student/upload', 'StudentUploadController::upload');
  $routes->get('student/list', 'StudentUploadController::list');
  $routes->delete('student/delete/(:num)', 'StudentUploadController::delete/$1');
+ $routes->post('student/upload/(:num)?', 'StudentUploadController::upload/$1');
+
+ 
 
 

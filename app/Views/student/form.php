@@ -100,37 +100,38 @@
     </div>
 
     <script>
-    $(document).ready(function() {
-        $('#studentForm').on('submit', function(e) {
-            e.preventDefault(); 
-            var formData = new FormData(this);
-            var url = '/student/upload'; // Default to create
-            var studentId = $('#student_id').val();
-            if (studentId) {
-                url += '/' + studentId; // Update existing student
-            }
-            $.ajax({
-                url: url,
-                type: 'POST',
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function(response) {
-                    alert('Form Submitted: ' + response); 
-                    window.location.href = '/student/list'; // Redirect to the list after submission
-                },
-                error: function(xhr) {
-                    var errors = xhr.responseJSON.errors;
-                    if (errors) {
-                        alert("Error: " + Object.values(errors).join("\n"));
-                    } else {
-                        alert('There was an error submitting the form');
-                    }
+$(document).ready(function() {
+    $('#studentForm').on('submit', function(e) {
+        e.preventDefault(); 
+        var formData = new FormData(this);
+        var url = '/student/upload'; 
+        var studentId = $('#student_id').val();
+        if (studentId) {
+            url += '/' + studentId; 
+        }
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                alert('Form Submitted: ' + response.success); 
+                window.location.href = '/student/list'; // Redirect to the list after submission
+            },
+            error: function(xhr) {
+                var errors = xhr.responseJSON.errors;
+                if (errors) {
+                    alert("Error: " + Object.values(errors).join("\n"));
+                } else {
+                    alert('There was an error submitting the form');
                 }
-            });
+            }
         });
     });
-    </script>
+});
+</script>
+
 
 </body>
 </html>

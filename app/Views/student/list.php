@@ -82,6 +82,7 @@
                     <td><?= $student['gender']; ?></td>
                     <td><?= $student['registration_no']; ?></td>
                     <td><?= $student['section']; ?></td>
+                    
                     <td>
                         <a href="<?= site_url('student/form/' . $student['id']); ?>" class="btn btn-warning">Edit</a>
                         <button class="btn btn-danger delete-student" data-id="<?= $student['id']; ?>">Delete</button>
